@@ -5,7 +5,12 @@
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow-dark);
 
-  min-height: 50rem;    //testing
+  // min-height: 50rem;    //testing
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    max-width: 100vw;
+  }
 }
 
 .header {
@@ -20,11 +25,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: $bp-smallest) {
+    flex-wrap: wrap;
+    height: 11rem;
+    align-content: space-around;
+  }
+
 }
 
 .content {
   // felx container for .sidebar and .hotel-view
   display: flex;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+
 
 }
 
@@ -60,6 +77,16 @@
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line);
 
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
+
+
+
 }
 
 .description {
@@ -71,6 +98,18 @@
   padding: 3rem;
 
   flex: 0 0 60%;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-right: 3rem;
+    padding: 2rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+
+  }
+
 
 }
 
