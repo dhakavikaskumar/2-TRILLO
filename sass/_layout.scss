@@ -1,0 +1,85 @@
+.container {
+  max-width: var(--container-max-width);
+
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-dark);
+
+  min-height: 50rem;    //testing
+}
+
+.header {
+  //default font size for child elements to inherit
+  font-size: 1.4rem;
+
+  height: var(--header-height);
+  background-color: var(--color-white);
+  border-bottom: var(--line);
+
+  // flex properties as the container for .logo, .search and .user-nav
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  // felx container for .sidebar and .hotel-view
+  display: flex;
+
+}
+
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+
+  //setting up navigation bar width
+  flex: 0 0 var(--sidebar-width);    // grow: 0, shrink: 0, basis: 18%
+
+  // flex properties as the container for .side-nav and .legal
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.hotel-view {
+  background-color: var(--color-white);
+
+  // background-color: orangered;    //testing
+  // height: 80rem;    //testing
+
+  //width for .hotel-view remaining container width after .sidebar occupies 18%
+  //so we want .hotel view to grow as mush as it can to occupy the rest of space
+  flex: 1;
+}
+
+.detail {
+  display: flex;
+
+  font-size: 1.4rem;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+
+}
+
+.description {
+  // background-color: orangered;   //testing;
+
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-verylight);
+  margin-right: 4.5rem;
+  padding: 3rem;
+
+  flex: 0 0 60%;
+
+}
+
+.user-reviews {
+  // background-color: yellowgreen;  //testing
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
